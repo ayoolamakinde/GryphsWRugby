@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ayoolamakinde.eloisejulien.gryphswrugby">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".Login"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Chat"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_chat"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HomeCoachActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_home_coach"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewLoginActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_new_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="gryphswrugby.page.link"
+                    android:scheme="http" />
+                <data
+                    android:host="gryphswrugby.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddEventActivity"
+            android:label="@string/title_activity_add_event"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ModifEvent"
+            android:label="@string/title_activity_modif_event"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CalendarCoachActivity"
+            android:label="@string/title_activity_calendar_coach"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <receiver android:name="MyReceiver">
+
+            <intent-filter>
+                <action android:name="com.tutorialspoint.CUSTOM_INTENT">
+                </action>
+            </intent-filter>
+
+        </receiver>
+    </application>
+
+</manifest>
